@@ -16,7 +16,12 @@ defineModule(sim, list(
   timeunit = "year",
   citation = list("citation.bib"),
   documentation = list("NEWS.md", "README.md", "movementDataPrep.Rmd"),
-  reqdPkgs = list("SpaDES.core (>= 2.1.0)", "ggplot2"),
+  reqdPkgs = list(
+    "SpaDES.core (>= 2.1.0)", "ggplot2", "terra", "raster", "sf",
+    "glmmTMB", "lme4", "adehabitatHR", "adehabitatLT", "lubridate", "rgdal",
+    "sp", "dummies", "classInt", "caret", "MuMIn", "forcats","foreach", "doParallel"
+    # "plyr", "tidyverse", 
+  ), 
   parameters = bindrows(
     #defineParameter("paramName", "paramClass", value, min, max, "parameter description"),
     defineParameter(".plots", "character", "screen", NA, NA,
